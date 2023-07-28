@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+ 
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <h1 align="center"><b>Photo Gallery</b></h1>
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image1.jpeg"/></div>
+        <div class="swiper-slide"><img src="image2.jpeg"/></div>
+        <div class="swiper-slide"><img src="image3.jpeg"/></div>
+        <div class="swiper-slide"><img src="image4.jpeg"/></div>
+        <div class="swiper-slide"><img src="image5.jpeg"/></div>
+        <div class="swiper-slide"><img src="image6.jpeg"/></div>
+        <div class="swiper-slide"><img src="image7.jpeg"/></div>
+        <div class="swiper-slide"><img src="image8.jpeg"/></div>
+        <div class="swiper-slide"><img src="image9.jpeg"/></div>
+        <div class="swiper-slide"><img src="image10.jpeg"/></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="image1.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image2.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image3.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image4.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image5.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image6.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image7.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image8.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image9.jpeg" width="80px"/></div>
+        <div class="swiper-slide"><img src="image10.jpeg" width="80px"/></div>
+      </div> 
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+        loop:true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>
